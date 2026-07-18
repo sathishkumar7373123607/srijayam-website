@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://srijayamflex.com/sitemap.xml
