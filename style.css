@@ -31,16 +31,19 @@ header{
 .logo{
     display:flex;
     align-items:center;
+    gap:15px;
 }
 
 .logo img{
-    width:60px;
-    margin-right:12px;
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    object-fit:cover;
 }
 
 .logo h1{
-    color:#fff;
-    font-size:26px;
+    margin:0;
+    font-size:28px;
 }
 
 nav a{
