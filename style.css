@@ -72,17 +72,17 @@ nav a:hover{
     height:100%;
 }
 
+.slider,
 .slide{
     position:absolute;
+    top:0;
+    left:0;
     width:100%;
     height:100%;
-    object-fit:cover;
-    opacity:0;
-    transition:opacity 1s ease;
 }
 
-.slide.active{
-    opacity:1;
+.slide{
+    object-fit:cover;
 }
 
 .hero-content{
@@ -93,10 +93,8 @@ nav a:hover{
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    color:white;
     text-align:center;
-    background:rgba(0,0,0,.45);
-    color:#fff;
-    padding:20px;
 }
 
 .hero-content h2{
