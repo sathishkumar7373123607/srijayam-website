@@ -413,3 +413,23 @@ margin-bottom:10px;
 }
 
 }
+@media (max-width:768px){
+
+header{
+    padding:10px 15px;
+}
+
+.logo h1{
+    display:none;
+}
+
+.logo img{
+    width:45px;
+    height:45px;
+}
+
+nav{
+    display:none;
+}
+
+}
