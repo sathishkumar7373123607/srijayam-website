@@ -1,1 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Flex Printing Palladam | Banner Printing | Sri Jayam Digital Flex Printing</title>
+
+<meta name="description" content="Sri Jayam Digital Flex Printing offers Flex Printing, Banner Printing, Vinyl Printing, Shop Boards, ACP Sign Boards, LED Sign Boards and Sticker Cutting in Palladam.">
+
+<meta name="keywords" content="Flex Printing Palladam,Banner Printing Palladam,Vinyl Printing Palladam,LED Sign Boards Palladam,ACP Sign Boards Palladam">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="icon" href="images/logo.png">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<img src="images/logo.png" alt="Sri Jayam Digital Flex Printing Logo">
+
+<h2>Sri Jayam Digital Flex Printing</h2>
+
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="flex-printing-palladam.html">Flex Printing</a>
+
+<a href="laser-cutting-palladam.html">Laser Cutting</a>
+
+<a href="acp-sign-board-palladam.html">ACP Boards</a>
+
+<a href="banner-printing-palladam.html">Banner Printing</a>
+
+<a href="index.html#contact">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Best Flex Printing Services in Palladam</h1>
+
+<p>
+
+Sri Jayam Digital Flex Printing provides premium Flex Printing,
+Banner Printing, Eco Solvent Printing,
+Vinyl Printing, Shop Boards,
+LED Sign Boards and ACP Sign Boards
+with excellent print quality.
+
+</p>
+<section class="services">
+
+<h2>Our Flex Printing Services</h2>
+
+<div class="service-list">
+
+<div class="service-box">
+<h3>Flex Banner Printing</h3>
+<p>High-quality banners for shops, events, exhibitions and promotions.</p>
+</div>
+
+<div class="service-box">
+<h3>Star Flex Printing</h3>
+<p>Premium quality star flex printing with vibrant colors.</p>
+</div>
+
+<div class="service-box">
+<h3>Vinyl Printing</h3>
+<p>Indoor and outdoor vinyl printing with eco-solvent technology.</p>
+</div>
+
+<div class="service-box">
+<h3>Shop Name Boards</h3>
+<p>Professional shop branding and business sign boards.</p>
+</div>
+
+<div class="service-box">
+<h3>LED Sign Boards</h3>
+<p>Custom LED illuminated sign boards for all businesses.</p>
+</div>
+
+<div class="service-box">
+<h3>ACP Sign Boards</h3>
+<p>Premium ACP board design and installation services.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="gallery">
+
+<h2>Our Recent Flex Printing Works</h2>
+
+<div class="gallery-grid">
+
+<img src="images/work1.jpeg" alt="Flex Printing Palladam">
+
+<img src="images/work2.jpeg" alt="Banner Printing Palladam">
+
+<img src="images/work3.jpeg" alt="Shop Board Palladam">
+
+<img src="images/work4.jpeg" alt="LED Sign Board Palladam">
+
+<img src="images/work5.jpeg" alt="ACP Sign Board Palladam">
+
+<img src="images/work6.jpeg" alt="Digital Printing Palladam">
+
+</div>
+
+</section>
+
+
+<section class="why">
+
+<h2>Why Choose Sri Jayam?</h2>
+
+<ul>
+
+<li>✔ Premium Print Quality</li>
+
+<li>✔ Latest Printing Technology</li>
+
+<li>✔ Affordable Pricing</li>
+
+<li>✔ Fast Delivery</li>
+
+<li>✔ Experienced Team</li>
+
+<li>✔ Trusted by Hundreds of Customers</li>
+
+</ul>
+
+</section>  
+
+<a href="tel:+917373123607" class="btn">📞 Call Now</a>
+
+<a href="https://wa.me/917373123607" class="btn">💬 WhatsApp</a>
+
+</section>
+<section class="contact">
+
+<h2>Contact Sri Jayam Digital Flex Printing</h2>
+
+<p><strong>Address:</strong><br>
+No.3, Near Sanjiv Nursing Home,<br>
+Kovai Main Road,<br>
+Anna Nagar, Palladam - 641664
+</p>
+
+<p><strong>Phone:</strong>
+<a href="tel:+917373123607">+91 73731 23607</a>
+</p>
+
+<p><strong>Email:</strong>
+<a href="mailto:srijayamflex@gmail.com">srijayamflex@gmail.com</a>
+</p>
+
+<p><strong>Business Hours:</strong><br>
+Monday - Saturday : 9:00 AM - 8:00 PM
+</p>
+
+</section>
+
+
+<section class="map">
+
+<h2>Find Us on Google Maps</h2>
+
+<iframe
+src="https://www.google.com/maps?q=Sri+Jayam+Flex+Printing+Palladam&output=embed"
+width="100%"
+height="400"
+style="border:0;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</section>
+
+
+<section class="reviews">
+
+<h2>Why Customers Choose Us</h2>
+
+<div class="review-box">
+⭐⭐⭐⭐⭐
+<p>Excellent print quality and fast delivery.</p>
+</div>
+
+<div class="review-box">
+⭐⭐⭐⭐⭐
+<p>Best Flex Printing service in Palladam.</p>
+</div>
+
+<div class="review-box">
+⭐⭐⭐⭐⭐
+<p>Professional service with affordable pricing.</p>
+</div>
+
+</section>
+
+
+<section class="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Do you provide Flex Printing in Palladam?</h3>
+<p>Yes. We provide high-quality flex printing for shops, events and businesses.</p>
+
+<h3>Do you provide ACP Sign Boards?</h3>
+<p>Yes. We design and install premium ACP sign boards.</p>
+
+<h3>Do you provide Laser Cutting?</h3>
+<p>Yes. We offer precision CO₂ laser cutting for acrylic, MDF and wood.</p>
+
+</section>
+<footer>
+
+<p>&copy; 2026 Sri Jayam Digital Flex Printing. All Rights Reserved.</p>
+
+<div class="social-links">
+
+<a href="https://www.facebook.com/srijayamflex" target="_blank">
+<i class="fab fa-facebook-f"></i> Facebook
+</a>
+
+<a href="https://www.instagram.com/srijayamflex/" target="_blank">
+<i class="fab fa-instagram"></i> Instagram
+</a>
+
+<a href="https://wa.me/917373123607" target="_blank">
+<i class="fab fa-whatsapp"></i> WhatsApp
+</a>
+
+</div>
+
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"Sri Jayam Digital Flex Printing",
+  "url":"https://srijayamflex.com",
+  "telephone":"+91 7373123607",
+  "email":"srijayamflex@gmail.com",
+  "image":"https://srijayamflex.com/images/logo.png",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"No.3, Near Sanjiv Nursing Home, Kovai Main Road, Anna Nagar",
+    "addressLocality":"Palladam",
+    "addressRegion":"Tamil Nadu",
+    "postalCode":"641664",
+    "addressCountry":"IN"
+  },
+  "sameAs":[
+    "https://www.facebook.com/srijayamflex",
+    "https://www.instagram.com/srijayamflex/"
+  ]
