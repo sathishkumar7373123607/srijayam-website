@@ -433,3 +433,45 @@ nav{
 }
 
 }
+/* ---------- MOBILE OPTIMIZATION ---------- */
+
+@media (max-width:768px){
+
+.hero{
+    height:100vh;
+}
+
+.hero-content{
+    padding:120px 20px 40px;
+}
+
+.hero-content h2{
+    font-size:42px;
+    line-height:1.2;
+}
+
+.hero-content p{
+    font-size:20px;
+    line-height:1.5;
+}
+
+.btn{
+    display:block;
+    width:220px;
+    margin:15px auto;
+}
+
+header{
+    padding:10px 15px;
+}
+
+.logo img{
+    width:42px;
+    height:42px;
+}
+
+section{
+    padding:60px 20px;
+}
+
+}
