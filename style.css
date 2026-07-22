@@ -476,10 +476,7 @@ section{
 
 }
 .menu-toggle{
-    display:none;
-    font-size:30px;
-    color:#fff;
-    cursor:pointer;
+    color:#ffcc00;
 }
 
 @media (max-width:768px){
