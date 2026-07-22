@@ -486,12 +486,14 @@ section{
 }
 
 nav{
-    display:none;
-    position:absolute;
-    top:65px;
-    left:0;
-    width:100%;
-    background:#111;
+    .menu-toggle{
+    display:block;
+    font-size:30px;
+    color:#fff;
+    cursor:pointer;
+    position:relative;
+    z-index:1001;
+    user-select:none;
 }
 
 nav.active{
