@@ -38,13 +38,21 @@ const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector("nav");
 
 if (menuToggle && nav) {
-    menuToggle.addEventListener("click", () => {
+
+    menuToggle.addEventListener("click", function (e) {
+        e.stopPropagation();
         nav.classList.toggle("active");
     });
-}
-// Close mobile menu after clicking a link
-document.querySelectorAll("nav a").forEach(link => {
-    link.addEventListener("click", () => {
-        nav.classList.remove("active");
+
+    nav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            nav.classList.remove("active");
+        });
     });
-});
+
+    document.addEventListener("click", function (e) {
+        if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+            nav.classList.remove("active");
+        }
+    });
+}
