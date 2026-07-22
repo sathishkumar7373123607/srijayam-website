@@ -40,3 +40,4 @@ if (menuToggle && nav) {
         nav.classList.toggle("active");
     });
 }
+alert("Menu JS Loaded");
