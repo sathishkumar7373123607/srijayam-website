@@ -1,306 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head><title>Flex Printing Palladam | Laser Cutting Palladam | ACP Sign Boards | Sri Jayam Digital Flex Printing</title>
+const slides = document.querySelectorAll(".slide");
 
-<meta name="description" content="Sri Jayam Digital Flex Printing, Palladam. Flex Printing, CO₂ Laser Cutting, ACP Sign Boards, LED Sign Boards, Vinyl Printing, Sticker Cutting, Name Boards.">
+if (slides.length > 0) {
+    let current = 0;
 
-<meta name="keywords" content="Flex Printing Palladam, Laser Cutting Palladam, ACP Sign Boards Palladam, LED Sign Board Palladam, Sticker Cutting Palladam, Sri Jayam Digital Flex Printing">
-
-<meta name="description" content="Sri Jayam Digital Flex Printing offers Flex Printing, Sticker Cutting, ACP Boards, LED Sign Boards, CO2 Laser Cutting and Digital Printing in Palladam, Tiruppur. Call 7373123607.">
-
-<meta name="keywords" content="Flex Printing Palladam, Digital Printing Palladam, Laser Cutting Palladam, Sticker Cutting Palladam, ACP Board Palladam, LED Sign Board Palladam, Sri Jayam Digital Flex Printing">
-
-<meta name="author" content="Sri Jayam Digital Flex Printing">
-
-<meta name="robots" content="index, follow">
-
-<meta property="og:title" content="Sri Jayam Digital Flex Printing">
-<meta property="og:description" content="Flex Printing | Sticker Cutting | ACP | LED Boards | CO2 Laser Cutting">
-<meta property="og:url" content="https://srijayamflex.com">
-<meta property="og:type" content="website">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-<link rel="stylesheet" href="style.css">
-<meta name="google-site-verification" content="baMaZGuDizLC4CjLwOC_mzJK0n2oPM3xyaMuxv6-r9E" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"LocalBusiness",
-  "name":"Sri Jayam Digital Flex Printing",
-  "url":"https://srijayamflex.com",
-  "logo":"https://srijayamflex.com/images/logo.png",
-  "image":"https://srijayamflex.com/images/work1.jpeg",
-  "telephone":"+91 7373123607",
-  "email":"srijayamflex@gmail.com",
-  "address":{
-    "@type":"PostalAddress",
-    "streetAddress":"No.3, Near Sanjiv Nursing Home, Kovai Main Road, Anna Nagar",
-    "addressLocality":"Palladam",
-    "addressRegion":"Tamil Nadu",
-    "postalCode":"641664",
-    "addressCountry":"IN"
-  },
-  "areaServed":"Palladam",
-  "sameAs":[
-    "https://www.facebook.com/srijayamflex",
-    "https://www.instagram.com/srijayamflex/"
-  ],
-  "keywords":[
-    "Flex Printing Palladam",
-    "Laser Cutting Palladam",
-    "ACP Sign Boards Palladam",
-    "LED Sign Board Palladam",
-    "Sticker Cutting Palladam"
-  ]
+    setInterval(() => {
+        slides[current].classList.remove("active");
+        current = (current + 1) % slides.length;
+        slides[current].classList.add("active");
+    }, 4000);
 }
-</script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-N9PJ4SB70G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-N9PJ4SB70G');
-</script>  
-</head>
-<body>
+const galleryImages = document.querySelectorAll(".gallery-item img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const close = document.querySelector(".close");
 
-<header>
-<div class="logo">
-    <img src="images/logo.png" alt="Sri Jayam Digital Flex Printing Logo">
-    <h1>Sri Jayam Digital Flex Printing</h1>
-</div>
+if (lightbox && lightboxImg && close) {
+    galleryImages.forEach(img => {
+        img.onclick = function () {
+            lightbox.style.display = "block";
+            lightboxImg.src = this.src;
+        };
+    });
 
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
-</nav>
-  <div class="menu-toggle">&#9776;</div>
-</header>
+    close.onclick = function () {
+        lightbox.style.display = "none";
+    };
 
-<section id="home" class="hero">
+    lightbox.onclick = function (e) {
+        if (e.target === lightbox) {
+            lightbox.style.display = "none";
+        }
+    };
+}
 
-<div class="slider">
-  <img class="slide active" src="images/work1.jpeg" alt="Flex Printing">
-  <img class="slide" src="images/work2.jpeg" alt="LED Sign Board">
-  <img class="slide" src="images/work3.jpeg" alt="Laser Cutting">
-  <img class="slide" src="images/work5.jpeg" alt="ACP Sign Board">
-  
-</div>
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("nav");
 
-<div class="hero-content">
-<h2>Sri Jayam Digital Flex Printing</h2>
-
-<p>
-Flex Printing | Banner Printing | LED Sign Boards | ACP Boards | CO₂ Laser Cutting | Sticker Cutting
-</p>
-
-<a class="btn" href="tel:7373123607">📞 Call Now</a>
-
-<a class="btn whatsapp" href="https://wa.me/917373123607">
-📱 WhatsApp
-</a>
-
-</div>
-<div class="social-links">
-    <a href="https://www.facebook.com/srijayamflex" target="_blank">
-        <i class="fab fa-facebook-f"></i> Facebook
-    </a>
-
-    <a href="https://www.instagram.com/srijayamflex/" target="_blank">
-        <i class="fab fa-instagram"></i> Instagram
-    </a>
-
-    <a href="https://wa.me/917373123607" target="_blank">
-        <i class="fab fa-whatsapp"></i> WhatsApp
-    </a>
-</div>
-</section>
-
-<section id="about">
-
-<h2>About Us</h2>
-
-<p>
-
-Sri Jayam Digital Flex Printing provides high quality digital printing services with affordable pricing and timely delivery.
-
-</p>
-
-</section>
-
-<section id="services">
-<h2>Our Services</h2>
-
-<div class="service-grid">
-
-<div class="service-card">
-<h3>🖨️ Flex Printing</h3>
-<p>High Quality Flex Printing</p>
-</div>
-
-<div class="service-card">
-<h3>🎨 Vinyl Printing</h3>
-<p>Indoor & Outdoor Vinyl Prints</p>
-</div>
-
-<div class="service-card">
-<h3>✂️ Sticker Cutting</h3>
-<p>Custom Sticker Cutting</p>
-</div>
-
-<div class="service-card">
-<h3>💡 LED Sign Board</h3>
-<p>Glow Sign & LED Boards</p>
-</div>
-
-<div class="service-card">
-<h3>🏢 ACP Sign Board</h3>
-<p>Premium ACP Boards</p>
-</div>
-
-<div class="service-card">
-<h3>🔥 CO₂ Laser Cutting</h3>
-<p>Acrylic, MDF & Wood Laser Cutting</p>
-</div>
-
-</div>
-</section>
-
-</section>
-
-<section id="gallery">
-
-<h2>Gallery</h2>
-
-<section id="gallery">
-
-<h2>Our Recent Works</h2>
-
-<div class="gallery-grid">
-
-<div class="gallery-item">
-<img src="images/work1.jpeg" alt="Flex Printing">
-<h3>Flex Printing</h3>
-</div>
-
-<div class="gallery-item">
-<img src="images/work2.jpeg" alt="LED Sign Board">
-<h3>LED Sign Board</h3>
-</div>
-
-<div class="gallery-item">
-<img src="images/work3.jpeg" alt="Laser Cutting">
-<h3>Laser Cutting</h3>
-</div>
-
-<div class="gallery-item">
-<img src="images/work4.jpeg" alt="Sticker Cutting">
-<h3>Sticker Cutting</h3>
-</div>
-
-<div class="gallery-item">
-<img src="images/work5.jpeg" alt="ACP Sign Board">
-<h3>ACP Sign Board</h3>
-</div>
-
-<div class="gallery-item">
-<img src="images/work6.jpeg" alt="Acrylic Letters">
-<h3>Acrylic Letters</h3>
-</div>
-
-</div>
-
-</section>
-
-</section>
-
-</section>
-
-<section id="contact">
-<h2>Find Us</h2>
-
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.5345623452654!2d77.2720197!3d10.998461400000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba9abeed9adf741%3A0x94198fc31b683541!2sSri%20jayam%20Flex%20Printing%20%26%20Co2%20Laser%20Cutting!5e0!3m2!1sen!2sin!4v1784299044197!5m2!1sen!2sin"
-width="100%"
-height="400"
-style="border:0;border-radius:12px;"
-allowfullscreen=""
-loading="lazy"
-referrerpolicy="strict-origin-when-cross-origin">
-</iframe>
-
-<h2>Contact Us</h2>
-
-<p>📞 7373123607</p>
-
-<p>📧 srijayamflex@gmail.com</p>
-
-<p>
-
-📍 No.3 Near Sanjiv Nursing Home,
-Kovai Main Road,
-Anna Nagar,
-Palladam -641664
-
-</p>
-
-</section>
-<section id="blog">
-    <h2>Latest Articles</h2>
-
-    <div class="blog-grid">
-
-        <div class="blog-card">
-            <h3>Best Flex Printing in Palladam</h3>
-            <p>Learn how to choose high-quality flex printing for shops, events and businesses.</p>
-            <a href="flex-printing-palladam.html">Read More</a>
-        </div>
-
-        <div class="blog-card">
-            <h3>Benefits of CO₂ Laser Cutting</h3>
-            <p>Discover why laser cutting is the best choice for acrylic, MDF and wood projects.</p>
-            <a href="laser-cutting-palladam.html">Read More</a>
-        </div>
-
-        <div class="blog-card">
-            <h3>Why Choose ACP Sign Boards?</h3>
-            <p>ACP sign boards give your business a premium and long-lasting professional look.</p>
-            <a href="acp-sign-board-palladam.html">Read More</a>
-        </div>
-
-    </div>
-</section>
-<footer>
-<div class="social-links">
-    <a href="https://www.facebook.com/srijayamflex" target="_blank">
-        <i class="fab fa-facebook-f"></i> Facebook
-    </a>
-<a href="https://www.instagram.com/srijayamflex/" target="_blank">
-    <i class="fab fa-instagram"></i> Instagram
-</a>
-    <a href="https://wa.me/917373123607" target="_blank">
-        <i class="fab fa-whatsapp"></i> WhatsApp
-    </a>
-</div>
-<p>
-
-© 2026 Sri Jayam Digital Flex Printing
-
-</p>
-
-</footer>
-
-<div id="lightbox" ...>
-...
-</div>
-
-<script src="script.js"></script>
-</body>
-</html>
+if (menuToggle && nav) {
+    menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+    });
+}
