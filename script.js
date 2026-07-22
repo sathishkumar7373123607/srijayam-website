@@ -42,3 +42,9 @@ if (menuToggle && nav) {
         nav.classList.toggle("active");
     });
 }
+// Close mobile menu after clicking a link
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", () => {
+        nav.classList.remove("active");
+    });
+});
