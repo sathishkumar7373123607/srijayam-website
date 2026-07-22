@@ -483,11 +483,6 @@ section{
 
 .menu-toggle{
     display:block;
-}
-
-nav{
-   .menu-toggle{
-    display:block !important;
     position:absolute;
     top:15px;
     right:20px;
@@ -495,6 +490,15 @@ nav{
     color:#ffffff;
     cursor:pointer;
     z-index:99999;
+}
+
+nav{
+    display:none;
+    position:absolute;
+    top:65px;
+    left:0;
+    width:100%;
+    background:#111;
 }
 
 nav.active{
