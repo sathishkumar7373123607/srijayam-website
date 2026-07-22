@@ -486,14 +486,15 @@ section{
 }
 
 nav{
-    .menu-toggle{
-    display:block;
-    font-size:30px;
-    color:#fff;
+   .menu-toggle{
+    display:block !important;
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-size:32px;
+    color:#ffffff;
     cursor:pointer;
-    position:relative;
-    z-index:1001;
-    user-select:none;
+    z-index:99999;
 }
 
 nav.active{
