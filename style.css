@@ -479,37 +479,6 @@ section{
     color:#ffcc00;
 }
 
-@media (max-width:768px){
-
-.menu-toggle{
-    display:block;
-}
-
-nav{
-   .menu-toggle{
-    display:block !important;
-    position:absolute;
-    top:15px;
-    right:20px;
-    font-size:32px;
-    color:#ffffff;
-    cursor:pointer;
-    z-index:99999;
-}
-
-nav.active{
-    display:block;
-}
-
-nav a{
-    display:block;
-    margin:0;
-    padding:15px;
-    text-align:center;
-    border-bottom:1px solid #333;
-}
-
-}
 
 
 .menu-toggle{
