@@ -6,10 +6,8 @@
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    line-height:1.6;
-    color:#333;
-    background:#f5f5f5;
+    margin:0;
+    overflow-x:hidden;
 }
 
 /* ---------- HEADER ---------- */
@@ -60,9 +58,11 @@ nav a:hover{
 
 /* ---------- HERO ---------- */
 
-.hero {
-    position: relative;
-    overflow: hidden;
+.hero{
+    position:relative;
+    width:100%;
+    min-height:100vh;
+    overflow:hidden;
 }
 
 .hero::before {
@@ -102,6 +102,14 @@ nav a:hover{
 .hero-content{
     position:relative;
     z-index:2;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+    padding:0 20px;
 }
 
 .hero-content h2{
