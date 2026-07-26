@@ -169,3 +169,55 @@ window.addEventListener("scroll", () => {
     }
 
 });
+// ==========================
+// MOBILE MENU
+// ==========================
+
+const menuBtn = document.querySelector(".menu-btn");
+const navMenu = document.querySelector("nav");
+
+if(menuBtn){
+    menuBtn.addEventListener("click",()=>{
+        navMenu.classList.toggle("active");
+    });
+}
+
+// ==========================
+// STICKY HEADER
+// ==========================
+
+window.addEventListener("scroll",()=>{
+
+    const header=document.querySelector("header");
+
+    if(window.scrollY>50){
+        header.classList.add("sticky");
+    }else{
+        header.classList.remove("sticky");
+    }
+
+});
+
+// ==========================
+// SCROLL ANIMATION
+// ==========================
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+});
+
+document.querySelectorAll(".animate").forEach((el)=>{
+
+observer.observe(el);
+
+});
