@@ -56,3 +56,116 @@ if (menuToggle && nav) {
         }
     });
 }
+// ===============================
+// Mobile Menu
+// ===============================
+
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("nav");
+
+if (menuToggle && nav) {
+
+    menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+    });
+
+    document.querySelectorAll("nav a").forEach(link => {
+        link.addEventListener("click", () => {
+            nav.classList.remove("active");
+        });
+    });
+
+    document.addEventListener("click", (e) => {
+
+        if (
+            !nav.contains(e.target) &&
+            !menuToggle.contains(e.target)
+        ) {
+            nav.classList.remove("active");
+        }
+
+    });
+
+}
+
+// ===============================
+// Gallery Lightbox
+// ===============================
+
+const galleryImages = document.querySelectorAll(".gallery-item img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const close = document.querySelector(".close");
+
+if (lightbox) {
+
+    galleryImages.forEach(img => {
+
+        img.addEventListener("click", () => {
+
+            lightbox.style.display = "flex";
+            lightboxImg.src = img.src;
+
+        });
+
+    });
+
+    close.onclick = () => {
+        lightbox.style.display = "none";
+    };
+
+    lightbox.onclick = (e) => {
+
+        if (e.target === lightbox) {
+            lightbox.style.display = "none";
+        }
+
+    };
+
+}
+
+// ===============================
+// Smooth Scroll
+// ===============================
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute("href"));
+
+        if (target) {
+
+            target.scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+    });
+
+});
+
+// ===============================
+// Header Shadow
+// ===============================
+
+window.addEventListener("scroll", () => {
+
+    const header = document.querySelector("header");
+
+    if (window.scrollY > 50) {
+
+        header.classList.add("sticky");
+
+    } else {
+
+        header.classList.remove("sticky");
+
+    }
+
+});
