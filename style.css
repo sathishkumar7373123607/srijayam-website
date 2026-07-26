@@ -487,27 +487,50 @@ nav{
 @media (max-width:768px){
 
 .hero{
-    height:100vh;
+    display:flex;
+    flex-direction:column;
+    padding:110px 20px 40px;
 }
 
-.hero-content{
-    padding:120px 20px 40px;
+.hero-left{
+    width:100%;
+    text-align:center;
 }
 
-.hero-content h2{
+.hero-left h1{
     font-size:42px;
-    line-height:1.2;
+    line-height:1.15;
+    margin-bottom:20px;
 }
 
-.hero-content p{
+.hero-left p{
     font-size:20px;
-    line-height:1.5;
+    line-height:1.6;
+}
+
+.hero-right{
+    width:100%;
+    margin-top:30px;
+    text-align:center;
+}
+
+.hero-right img{
+    width:90%;
+    max-width:350px;
+    height:auto;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
 }
 
 .btn{
-    display:block;
-    width:220px;
-    margin:15px auto;
+    width:250px;
+}
+
 }
 
 header{
