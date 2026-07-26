@@ -1,71 +1,12 @@
-const slides = document.querySelectorAll(".slide");
+// ==========================
+// MOBILE MENU
+// ==========================
 
-if (slides.length > 0) {
-    let current = 0;
-
-    setInterval(() => {
-        slides[current].classList.remove("active");
-        current = (current + 1) % slides.length;
-        slides[current].classList.add("active");
-    }, 4000);
-}
-
-const galleryImages = document.querySelectorAll(".gallery-item img");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-const close = document.querySelector(".close");
-
-if (lightbox && lightboxImg && close) {
-    galleryImages.forEach(img => {
-        img.onclick = function () {
-            lightbox.style.display = "block";
-            lightboxImg.src = this.src;
-        };
-    });
-
-    close.onclick = function () {
-        lightbox.style.display = "none";
-    };
-
-    lightbox.onclick = function (e) {
-        if (e.target === lightbox) {
-            lightbox.style.display = "none";
-        }
-    };
-}
-
-const menuToggle = document.querySelector(".menu-toggle");
+const menuBtn = document.querySelector(".menu-btn");
 const nav = document.querySelector("nav");
 
-if (menuToggle && nav) {
-
-    menuToggle.addEventListener("click", function (e) {
-        e.stopPropagation();
-        nav.classList.toggle("active");
-    });
-
-    nav.querySelectorAll("a").forEach(function (link) {
-        link.addEventListener("click", function () {
-            nav.classList.remove("active");
-        });
-    });
-
-    document.addEventListener("click", function (e) {
-        if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
-            nav.classList.remove("active");
-        }
-    });
-}
-// ===============================
-// Mobile Menu
-// ===============================
-
-const menuToggle = document.querySelector(".menu-toggle");
-const nav = document.querySelector("nav");
-
-if (menuToggle && nav) {
-
-    menuToggle.addEventListener("click", () => {
+if (menuBtn && nav) {
+    menuBtn.addEventListener("click", () => {
         nav.classList.toggle("active");
     });
 
@@ -74,125 +15,48 @@ if (menuToggle && nav) {
             nav.classList.remove("active");
         });
     });
-
-    document.addEventListener("click", (e) => {
-
-        if (
-            !nav.contains(e.target) &&
-            !menuToggle.contains(e.target)
-        ) {
-            nav.classList.remove("active");
-        }
-
-    });
-
 }
 
-// ===============================
-// Gallery Lightbox
-// ===============================
+// ==========================
+// GALLERY LIGHTBOX
+// ==========================
 
 const galleryImages = document.querySelectorAll(".gallery-item img");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
-const close = document.querySelector(".close");
+const closeBtn = document.querySelector(".close");
 
-if (lightbox) {
+if (lightbox && lightboxImg && closeBtn) {
 
     galleryImages.forEach(img => {
-
         img.addEventListener("click", () => {
-
             lightbox.style.display = "flex";
             lightboxImg.src = img.src;
-
         });
-
     });
 
-    close.onclick = () => {
+    closeBtn.onclick = () => {
         lightbox.style.display = "none";
     };
 
     lightbox.onclick = (e) => {
-
         if (e.target === lightbox) {
             lightbox.style.display = "none";
         }
-
     };
-
-}
-
-// ===============================
-// Smooth Scroll
-// ===============================
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-
-    anchor.addEventListener("click", function (e) {
-
-        e.preventDefault();
-
-        const target = document.querySelector(this.getAttribute("href"));
-
-        if (target) {
-
-            target.scrollIntoView({
-
-                behavior: "smooth"
-
-            });
-
-        }
-
-    });
-
-});
-
-// ===============================
-// Header Shadow
-// ===============================
-
-window.addEventListener("scroll", () => {
-
-    const header = document.querySelector("header");
-
-    if (window.scrollY > 50) {
-
-        header.classList.add("sticky");
-
-    } else {
-
-        header.classList.remove("sticky");
-
-    }
-
-});
-// ==========================
-// MOBILE MENU
-// ==========================
-
-const menuBtn = document.querySelector(".menu-btn");
-const navMenu = document.querySelector("nav");
-
-if(menuBtn){
-    menuBtn.addEventListener("click",()=>{
-        navMenu.classList.toggle("active");
-    });
 }
 
 // ==========================
 // STICKY HEADER
 // ==========================
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
 
-    const header=document.querySelector("header");
+    const header = document.querySelector("header");
 
-    if(window.scrollY>50){
+    if (window.scrollY > 50) {
         header.classList.add("sticky");
-    }else{
+    } else {
         header.classList.remove("sticky");
     }
 
@@ -202,22 +66,18 @@ window.addEventListener("scroll",()=>{
 // SCROLL ANIMATION
 // ==========================
 
-const observer=new IntersectionObserver((entries)=>{
+const observer = new IntersectionObserver((entries) => {
 
-entries.forEach(entry=>{
+    entries.forEach(entry => {
 
-if(entry.isIntersecting){
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
 
-entry.target.classList.add("show");
-
-}
-
-});
+    });
 
 });
 
-document.querySelectorAll(".animate").forEach((el)=>{
-
-observer.observe(el);
-
+document.querySelectorAll(".animate").forEach(el => {
+    observer.observe(el);
 });
