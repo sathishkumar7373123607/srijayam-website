@@ -221,3 +221,147 @@ nav{
 }
 
 }
+/* ===========================
+MOBILE MENU
+=========================== */
+
+.menu-btn{
+display:none;
+font-size:28px;
+cursor:pointer;
+color:#ff6a00;
+}
+
+@media(max-width:992px){
+
+.menu-btn{
+display:block;
+}
+
+nav{
+position:absolute;
+top:80px;
+left:0;
+width:100%;
+background:white;
+display:none;
+padding:20px;
+box-shadow:0 15px 30px rgba(0,0,0,.1);
+}
+
+nav.active{
+display:block;
+}
+
+nav ul{
+flex-direction:column;
+gap:18px;
+}
+
+}
+
+/* ===========================
+FLOATING BUTTONS
+=========================== */
+
+.whatsapp-float{
+
+position:fixed;
+
+right:20px;
+
+bottom:90px;
+
+width:60px;
+
+height:60px;
+
+background:#25D366;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+color:#fff;
+
+font-size:30px;
+
+text-decoration:none;
+
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+z-index:999;
+
+}
+
+.call-float{
+
+position:fixed;
+
+right:20px;
+
+bottom:20px;
+
+width:60px;
+
+height:60px;
+
+background:#ff6a00;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+color:white;
+
+font-size:28px;
+
+text-decoration:none;
+
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+z-index:999;
+
+}
+
+/* ===========================
+SCROLL ANIMATION
+=========================== */
+
+.animate{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:1s;
+
+}
+
+.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* ===========================
+STICKY HEADER
+=========================== */
+
+header.sticky{
+
+background:rgba(255,255,255,.95);
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
