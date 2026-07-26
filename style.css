@@ -365,3 +365,136 @@ background:rgba(255,255,255,.95);
 box-shadow:0 10px 25px rgba(0,0,0,.08);
 
 }
+/* ===========================
+SECTION TITLE
+=========================== */
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title h2{
+font-size:42px;
+color:#222;
+margin-bottom:10px;
+}
+
+.section-title p{
+color:#777;
+}
+
+/* ===========================
+SERVICES
+=========================== */
+
+.services{
+padding:100px 0;
+background:#fff;
+}
+
+.service-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
+
+}
+
+.service-card{
+
+background:#fff;
+
+padding:40px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.service-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.service-card i{
+
+font-size:50px;
+
+color:#ff6a00;
+
+margin-bottom:20px;
+
+}
+
+.service-card h3{
+
+margin-bottom:15px;
+
+}
+
+.service-card p{
+
+color:#666;
+
+line-height:1.8;
+
+}
+
+/* ===========================
+COUNTER
+=========================== */
+
+.counter{
+
+padding:90px 0;
+
+background:linear-gradient(135deg,#ff7a00,#ff9500);
+
+color:white;
+
+}
+
+.counter-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:30px;
+
+text-align:center;
+
+}
+
+.counter h2{
+
+font-size:48px;
+
+margin-bottom:10px;
+
+}
+
+.counter p{
+
+font-size:18px;
+
+}
+
+@media(max-width:768px){
+
+.counter-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
