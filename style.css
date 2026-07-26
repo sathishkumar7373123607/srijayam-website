@@ -572,3 +572,29 @@ section{
         border-bottom:1px solid #333;
     }
 }
+@media(max-width:768px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero-left,
+.hero-right{
+    width:100%;
+}
+
+.hero-left h1{
+    font-size:40px;
+}
+
+.hero-buttons{
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.hero-right{
+    margin-top:40px;
+}
+
+}
