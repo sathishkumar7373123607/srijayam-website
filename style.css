@@ -1,187 +1,391 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sri Jayam Digital Flex Printing</title>
+/* ---------- RESET ---------- */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-<link rel="stylesheet" href="style.css">
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.6;
+    color:#333;
+    background:#f5f5f5;
+}
 
-</head>
-<body>
+/* ---------- HEADER ---------- */
 
-<header>
-<div class="logo">
-<img src="images/logo.png" alt="Sri Jayam Logo">
-<h1>Sri Jayam Digital Flex Printing</h1>
-</div>
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#111;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+    z-index:999;
+    box-shadow:0 3px 10px rgba(0,0,0,.3);
+}
 
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
 
-<section id="home" class="hero">
-<h2>Professional Printing Solutions</h2>
-<p>Flex Printing | Sticker Cutting | ACP | LED Boards | Laser Cutting</p>
+.logo img{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    object-fit:cover;
+}
 
-<a class="btn" href="tel:7373123607">📞 Call Now</a>
+.logo h1{
+    margin:0;
+    font-size:28px;
+}
 
-<a class="btn whatsapp"
-href="https://wa.me/917373123607">
-💬 WhatsApp
-</a>
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:bold;
+    transition:.3s;
+}
 
-</section>
+nav a:hover{
+    color:#ffcc00;
+}
 
-<section id="about">
+/* ---------- HERO ---------- */
 
-<h2>About Us</h2>
+.hero{
+    position:relative;
+    width:100%;
+    height:650px;
+    overflow:hidden;
+    margin:0;
+    padding:0;
+}
 
-<p>
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
 
-Sri Jayam Digital Flex Printing provides high quality digital printing services with affordable pricing and timely delivery.
+.slider,
+.slide{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
 
-</p>
+.slide{
+    object-fit:cover;
+}
 
-</section>
+.hero::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.35);
+    z-index:1;
+}
 
-<section id="services">
+.hero-content{
+    position:relative;
+    z-index:2;
+}
 
-<h2>Our Services</h2>
+.hero-content h2{
+    font-size:52px;
+    margin-bottom:20px;
+}
 
-<ul>
+.hero-content p{
+    font-size:22px;
+    margin-bottom:30px;
+}
 
-<li>Flex Printing</li>
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    margin:8px;
+    border-radius:30px;
+    text-decoration:none;
+    color:#fff;
+    background:#d60000;
+    font-weight:bold;
+    transition:.3s;
+}
 
-<li>Vinyl Printing</li>
+.btn:hover{
+    background:#a80000;
+}
 
-<li>Sticker Cutting</li>
+.whatsapp{
+    background:#25D366;
+}
 
-<li>ACP Sign Board</li>
+.whatsapp:hover{
+    background:#1ea952;
+}
 
-<li>LED Sign Board</li>
+/* ---------- SECTION ---------- */
 
-<li>Laser Cutting</li>
+section{
+    padding:80px 10%;
+}
 
-<li>Acrylic Letters</li>
+h2{
+    text-align:center;
+    margin-bottom:25px;
+    font-size:36px;
+}
 
-<li>Sun Board Printing</li>
+.hero-content{
+position:relative;
+z-index:2;
+text-align:center;
+color:white;
+padding-top:180px;
+background:rgba(0,0,0,.35);
+height:100%;
+}
 
-</ul>
+.hero h2{
+font-size:42px;
+}
 
-</section>
+.hero p{
+font-size:22px;
+margin:20px 0;
+}
+/* ---------- SERVICES ---------- */
 
-<section id=.gallery{
+#services{
+    background:#ffffff;
+}
+
+#services ul{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    list-style:none;
+    margin-top:30px;
+}
+
+#services li{
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+#services li:hover{
+    transform:translateY(-8px);
+    background:#d60000;
+    color:#fff;
+}
+
+/* ---------- GALLERY ---------- */
+
+#gallery{
+    background:#f8f8f8;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+    margin-top:30px;
+}
+
+.gallery-item{
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.gallery-item:hover{
+    transform:translateY(-8px);
+}
+
+.gallery-item img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    display:block;
+}
+
+.gallery-item h3{
+    padding:18px;
+    text-align:center;
+    font-size:20px;
+}
+
+/* ---------- ABOUT ---------- */
+
+#about{
+    background:#ffffff;
+    text-align:center;
+}
+
+#about p{
+    max-width:900px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* ---------- IMAGE HOVER ---------- */
+
+.gallery-item img{
+    transition:transform .4s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.05);
+}
+#services{
+padding:60px 20px;
+background:#f5f5f5;
+text-align:center;
+}
+
+.service-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+gap:25px;
+max-width:1100px;
+margin:auto;
 }
 
-.gallery img{
-width:100%;
-height:220px;
-object-fit:cover;
+.service-card{
+background:#fff;
+padding:25px;
 border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,.2);
+box-shadow:0 5px 15px rgba(0,0,0,.15);
 transition:.3s;
-cursor:pointer;
 }
 
-.gallery img:hover{
-transform:scale(1.05);
+.service-card:hover{
+transform:translateY(-8px);
 }
-<section id="quote">
-    <h2>Get a Free Quote</h2>
 
-    <form action="https://formsubmit.co/srijayamflex@gmail.com" method="POST">
+.service-card h3{
+color:#d60000;
+margin-bottom:10px;
+}
+.gallery-item img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
 
-        <input type="text" name="name" placeholder="Your Name" required>
+.gallery-item img:hover{
+    transform:scale(1.05);
+}
 
-        <input type="tel" name="phone" placeholder="Mobile Number" required>
+.lightbox{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.9);
+    z-index:9999;
+}
 
-        <input type="email" name="email" placeholder="Email">
+.lightbox img{
+    display:block;
+    max-width:90%;
+    max-height:90%;
+    margin:40px auto;
+}
 
-        <select name="service">
-            <option>Flex Printing</option>
-            <option>Vinyl Printing</option>
-            <option>Sticker Cutting</option>
-            <option>Laser Cutting</option>
-            <option>LED Sign Board</option>
-            <option>ACP Sign Board</option>
-        </select>
+.close{
+    position:absolute;
+    top:20px;
+    right:35px;
+    color:white;
+    font-size:40px;
+    cursor:pointer;
+}
+.social-links{
+    text-align:center;
+    margin-top:20px;
+}
 
-        <textarea name="message" placeholder="Project Details"></textarea>
+.social-links a{
+    display:inline-block;
+    margin:8px;
+    padding:10px 18px;
+    color:#fff;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+}
 
-        <button type="submit" class="btn">
-            Send Enquiry
-        </button>
+.social-links a:nth-child(1){
+    background:#1877F2;
+}
 
-    </form><section id="quote">
-    <h2>Get a Free Quote</h2>
+.social-links a:nth-child(2){
+    background:#E4405F;
+}
 
-    <form action="https://formsubmit.co/srijayamflex@gmail.com" method="POST">
+.social-links a:nth-child(3){
+    background:#25D366;
+}
 
-        <input type="text" name="name" placeholder="Your Name" required>
+.social-links a:hover{
+    opacity:0.9;
+}
+#blog{
+    padding:60px 20px;
+    background:#ffffff;
+    text-align:center;
+}
 
-        <input type="tel" name="phone" placeholder="Mobile Number" required>
+.blog-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    max-width:1100px;
+    margin:auto;
+}
 
-        <input type="email" name="email" placeholder="Email">
+.blog-card{
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
 
-        <select name="service">
-            <option>Flex Printing</option>
-            <option>Vinyl Printing</option>
-            <option>Sticker Cutting</option>
-            <option>Laser Cutting</option>
-            <option>LED Sign Board</option>
-            <option>ACP Sign Board</option>
-        </select>
-
-        <textarea name="message" placeholder="Project Details"></textarea>
-
-        <button type="submit" class="btn">
-            Send Enquiry
-        </button>
-
-    </form>
-</section>
-</section>
-</section>
-
-<section id="contact">
-
-<h2>Contact Us</h2>
-
-<p>📞 7373123607</p>
-
-<p>📧 srijayamflex@gmail.com</p>
-
-<p>
-
-📍 No.3 Near Sanjiv Nursing Home,
-Kovai Main Road,
-Anna Nagar,
-Palladam -641664
-
-</p>
-
-</section>
-
-<footer>
-
-<p>
-
-© 2026 Sri Jayam Digital Flex Printing
-
-</p>
-
-</footer>
-
-<script src="script.js"></script>
-
-</body>
-</html>
+.blog-card a{
+    display:inline-block;
+    margin-top:15px;
+    background:#d60000;
+    color:#fff;
+    padding:10px 18px;
+    border-radius:6px;
+    text-decoration:none;
+}
