@@ -1,83 +1,47 @@
-// ==========================
-// MOBILE MENU
-// ==========================
+// Smooth scrolling for menu links
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
 
-const menuBtn = document.querySelector(".menu-btn");
-const nav = document.querySelector("nav");
+        const target = document.querySelector(this.getAttribute('href'));
 
-if (menuBtn && nav) {
-    menuBtn.addEventListener("click", () => {
-        nav.classList.toggle("active");
+        if(target){
+            target.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
     });
+});
 
-    document.querySelectorAll("nav a").forEach(link => {
-        link.addEventListener("click", () => {
-            nav.classList.remove("active");
-        });
+// Fade-in animation on scroll
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+        }
     });
+},{
+    threshold:0.2
+});
+
+sections.forEach(section=>{
+    section.style.opacity="0";
+    section.style.transform="translateY(40px)";
+    section.style.transition="all 0.8s ease";
+    observer.observe(section);
+});
+
+// Current year in footer
+const footer = document.querySelector("footer p");
+if (footer) {
+    footer.innerHTML =
+    `© ${new Date().getFullYear()} Sri Jayam Digital Flex Printing. All Rights Reserved.`;
 }
 
-// ==========================
-// GALLERY LIGHTBOX
-// ==========================
-
-const galleryImages = document.querySelectorAll(".gallery-item img");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-const closeBtn = document.querySelector(".close");
-
-if (lightbox && lightboxImg && closeBtn) {
-
-    galleryImages.forEach(img => {
-        img.addEventListener("click", () => {
-            lightbox.style.display = "flex";
-            lightboxImg.src = img.src;
-        });
-    });
-
-    closeBtn.onclick = () => {
-        lightbox.style.display = "none";
-    };
-
-    lightbox.onclick = (e) => {
-        if (e.target === lightbox) {
-            lightbox.style.display = "none";
-        }
-    };
-}
-
-// ==========================
-// STICKY HEADER
-// ==========================
-
-window.addEventListener("scroll", () => {
-
-    const header = document.querySelector("header");
-
-    if (window.scrollY > 50) {
-        header.classList.add("sticky");
-    } else {
-        header.classList.remove("sticky");
-    }
-
-});
-
-// ==========================
-// SCROLL ANIMATION
-// ==========================
-
-const observer = new IntersectionObserver((entries) => {
-
-    entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
-
-    });
-
-});
-
-document.querySelectorAll(".animate").forEach(el => {
-    observer.observe(el);
-});
+// Welcome message
+setTimeout(() => {
+    console.log("Welcome to Sri Jayam Digital Flex Printing");
+},1000);
