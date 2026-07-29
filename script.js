@@ -1,47 +1,109 @@
-// Smooth scrolling for menu links
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
+// ======================================
+// Sri Jayam Digital Flex Printing V2
+// script.js
+// ======================================
 
-        const target = document.querySelector(this.getAttribute('href'));
+// Mobile Menu
 
-        if(target){
-            target.scrollIntoView({
-                behavior: "smooth"
-            });
-        }
+const menuBtn = document.querySelector(".menu-btn");
+const nav = document.querySelector("nav");
+
+if (menuBtn && nav) {
+
+    menuBtn.addEventListener("click", () => {
+        nav.classList.toggle("active");
     });
-});
 
-// Fade-in animation on scroll
-const sections = document.querySelectorAll("section");
+    document.querySelectorAll("nav a").forEach(link => {
 
-const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-        if(entry.isIntersecting){
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-        }
+        link.addEventListener("click", () => {
+            nav.classList.remove("active");
+        });
+
     });
-},{
-    threshold:0.2
-});
 
-sections.forEach(section=>{
-    section.style.opacity="0";
-    section.style.transform="translateY(40px)";
-    section.style.transition="all 0.8s ease";
-    observer.observe(section);
-});
-
-// Current year in footer
-const footer = document.querySelector("footer p");
-if (footer) {
-    footer.innerHTML =
-    `© ${new Date().getFullYear()} Sri Jayam Digital Flex Printing. All Rights Reserved.`;
 }
 
-// Welcome message
-setTimeout(() => {
-    console.log("Welcome to Sri Jayam Digital Flex Printing");
-},1000);
+// Sticky Header
+
+window.addEventListener("scroll", () => {
+
+    const header = document.querySelector("header");
+
+    if (window.scrollY > 30) {
+
+        header.classList.add("sticky");
+
+    } else {
+
+        header.classList.remove("sticky");
+
+    }
+
+});
+
+// Scroll Animation
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+});
+
+document.querySelectorAll(".card").forEach(card => {
+
+    card.classList.add("hidden");
+
+    observer.observe(card);
+
+});
+
+// Smooth Scroll
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute("href"));
+
+        if (target) {
+
+            target.scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+    });
+
+});
+
+// Floating Hero Image
+
+const heroImage = document.querySelector(".hero-image img");
+
+if (heroImage) {
+
+    let position = 0;
+
+    setInterval(() => {
+
+        position = position === 0 ? -10 : 0;
+
+        heroImage.style.transform = `translateY(${position}px)`;
+
+    }, 1500);
+
+}
