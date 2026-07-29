@@ -66,24 +66,36 @@ document.querySelectorAll(".card").forEach(card => {
 
 });
 
+// ==========================================
 // Smooth Scroll
+// ==========================================
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
     anchor.addEventListener("click", function (e) {
 
-        e.preventDefault();
+        const href = this.getAttribute("href");
 
-        const target = document.querySelector(this.getAttribute("href"));
+        // Ignore empty "#"
+        if (href === "#") {
+            return;
+        }
+
+        const target = document.querySelector(href);
 
         if (target) {
+            e.preventDefault();
 
             target.scrollIntoView({
-
-                behavior: "smooth"
-
+                behavior: "smooth",
+                block: "start"
             });
 
+            // Close mobile menu after click
+            const nav = document.querySelector("nav");
+            if (nav) {
+                nav.classList.remove("active");
+            }
         }
 
     });
