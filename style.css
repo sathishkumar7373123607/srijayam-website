@@ -392,7 +392,11 @@ transform:translateY(0);
 nav{
     display:none;
 }
-
+nav.active ul{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
 .menu-btn{
     display:block;
     cursor:pointer;
