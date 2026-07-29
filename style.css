@@ -411,11 +411,11 @@ nav.active{
     right:10px;
     left:auto;
 
-    width:160px;
+    width:140px;
 
     background:#fff;
-    padding:20px;
-    border-radius:12px;
+    padding:10px;
+    border-radius:7px;
     box-shadow:0 10px 20px rgba(0,0,0,.15);
     z-index:999;
 }
