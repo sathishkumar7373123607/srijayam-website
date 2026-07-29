@@ -421,10 +421,14 @@ nav.active{
 }
 }
 
-nav.active ul{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+nav.active ul li a{
+    display:block;
+    padding:12px 15px;
+    font-size:18px;
+}
+
+nav.active{
+    border-radius:10px;
 }
 
 nav.active ul li{
