@@ -408,10 +408,10 @@ nav.active{
     display:block;
     position:absolute;
     top:100%;
-    right:15px;
+    right:10px;
     left:auto;
 
-    width:220px;
+    width:160px;
 
     background:#fff;
     padding:20px;
