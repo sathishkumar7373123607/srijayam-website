@@ -389,6 +389,9 @@ transform:translateY(0);
 /* Mobile Menu */
 
 @media(max-width:991px){
+    header{
+    position:relative;
+}
 nav{
     display:none;
 }
@@ -407,7 +410,7 @@ display:block;
 
 position:absolute;
 
-top:90px;
+top:100px;
 
 left:0;
 
@@ -418,9 +421,11 @@ background:white;
 padding:25px;
 
 box-shadow:0 10px 20px rgba(0,0,0,.08);
-z-index:9999;
+z-index:999;
 }
-
+header{
+    position:relative;
+}
 nav.active ul{
 
 flex-direction:column;
