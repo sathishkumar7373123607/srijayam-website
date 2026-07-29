@@ -389,7 +389,14 @@ transform:translateY(0);
 /* Mobile Menu */
 
 @media(max-width:991px){
+nav{
+    display:none;
+}
 
+.menu-btn{
+    display:block;
+    cursor:pointer;
+}
 nav.active{
 
 display:block;
