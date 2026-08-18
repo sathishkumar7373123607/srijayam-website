@@ -881,7 +881,7 @@ grid-template-columns:1fr;
     opacity: 0.85;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 320px) {
     .review-card {
         flex-direction: column;
         text-align: center;
